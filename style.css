@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('https://www.teahub.io/photos/full/56-560662_8k-abstract-wallpaper-background-abstrak-vector-hd.jpg');
+    background-size: cover;
+    color: white;
+    overflow-x: hidden;
+}
+
+header {
+    background: #fffb0e;
+    color: white;
+    padding: 1rem 0;
+    position: relative;
+    z-index: 1000; /* Pastikan header tidak menutupi konten yang dapat di-scroll */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 1rem;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    background: #fffb0e; /* Ensure the background matches the header */
+}
+
+.logo-img {
+    width: 100px;
+    margin-top: 40px;
+    margin-right: 70px;
+}
+
+.logo-text {
+    font-size: 5rem;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    font-size: 2rem;
+}
+
+.nav-links li {
+    margin-left: 3rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    height: 2px;
+    width: 25px;
+    background-color: white;
+    margin: 4px 0;
+}
+
+section {
+    padding: 4rem 1rem;
+    text-align: center;
+    margin-bottom: 100px; /* Pastikan ada cukup ruang di bawah section */
+}
+
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.service {
+    flex: 1 1 300px;
+    max-width: 300px;
+    text-align: center;
+}
+ 
+
+h1{
+    font-size: 100px;
+    font-family: 'Permanent Marker', cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.service img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+footer {
+    background: #fffb0e;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+.permanent-marker-regular h1 {
+    font-size: 10rem; /* Ukuran font lebih besar untuk heading */
+}
+
+.permanent-marker-regular {
+    font-family: 'Permanent Marker', cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+}
+
+/* Animations */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 8s forwards;
+}
+
+.slide-in {
+    opacity: 0;
+    transform: translateX(-100%);
+    animation: slideIn 8s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Corner Image Styling */
+.corner-image {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
+}
+
+/* Styling for the paragraph and button */
+#copy-text {
+    font-size: 3rem; /* Ukuran font lebih besar */
+    font-weight: bold;
+    margin: 1rem 0;
+    border-bottom: 3px solid #fffb0e; /* Border kuning di bawah teks */
+    padding-bottom: 10px; /* Spasi antara teks dan border */
+}
+
+/* Button styling */
+#copy-button {
+    background-color: #fffb0e;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+#copy-button:hover {
+    background-color: #f79b9b;
+}
+
+/* Box Styling */
+.shadow-box {
+    background: rgba(224, 221, 20, 0.2);
+    padding: 3rem;
+    margin: 4rem 1rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative; /* Ensure the positioning context for the image */
+}
+
+.shadow-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+.shadow-box h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.shadow-box p {
+    font-size: 1.2rem;
+}
+
+.shadow-box img {
+    width: 32%;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    border-radius: 45%;
+    border: 2px solid #ffffff;
+}
+
+.home__img {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.home__img img {
+    max-width: 100%;
+    height: auto;
+}
+
+.home__links {
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.home__links a {
+    margin: 0 0.5rem;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden; /* Hanya sembunyikan scroll horizontal jika diperlukan */
+}
